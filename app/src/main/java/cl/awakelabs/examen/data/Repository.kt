@@ -50,9 +50,5 @@ class Repository(private val heroAPI: HeroAPI, private val heroDAO: HeroDAO) {
 
     }
 
-    fun Hero.transform(): HeroEntity =
-        HeroEntity(this.id, this.name, this.origin, this.image, this.power, this.since)
-    fun Details.transformToDetail(): HeroDetailEntity =
-        HeroDetailEntity(this.id, this.name,this.origin, this.image, this.power,this.since, this.color, this.translate)
 
 }
