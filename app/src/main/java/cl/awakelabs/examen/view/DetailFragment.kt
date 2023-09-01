@@ -50,6 +50,7 @@ class DetailFragment : Fragment() {
                 binding.detPower.text = it.power
                 binding.detSince.text = it.since.toString()
                 binding.detColor.text = it.color
+                binding.detId.text = it.id.toString()
 
                 val translateValue: String =
                     if (it.translate) {

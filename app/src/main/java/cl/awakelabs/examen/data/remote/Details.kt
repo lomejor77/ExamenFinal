@@ -8,7 +8,7 @@ data class Details(
     @SerializedName("origen") val origin:String,
     @SerializedName("imagenLink") val image: String,
     @SerializedName("poder") val power:String,
-    @SerializedName("Año_creacion") val since: Int,
+    @SerializedName("año_creacion") val since: Int,
     val color: String,
     @SerializedName("traduccion") val translate: Boolean
 )
