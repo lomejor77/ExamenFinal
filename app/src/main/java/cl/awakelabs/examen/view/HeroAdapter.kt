@@ -43,9 +43,9 @@ class HeroAdapter : RecyclerView.Adapter<HeroAdapter.ItemHeroViewHolder>() {
         fun bind(hero: HeroEntity) {
             view.imgHero.load(hero.image)
             view.txName.text = hero.name
-            view.txOrigin.text = hero.origin
-            view.txPower.text = hero.power
-            view.txSince.text = hero.since.toString()
+            //view.txOrigin.text = hero.origin
+            //view.txPower.text = hero.power
+            //view.txSince.text = hero.since.toString()
 
             view.cardList.setOnClickListener {
                 val bundle = Bundle()

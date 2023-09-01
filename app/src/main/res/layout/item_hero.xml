@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardList"
-    android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="12dp"
     app:cardCornerRadius="6dp"
+    app:cardElevation="4dp"
     app:contentPadding="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,62 +15,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txOrigin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Origin"
-            android:textColor="@color/primary_text"
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="298dp"
-            tools:layout_editor_absoluteY="109dp" />
-
-        <TextView
-            android:id="@+id/txPower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Power"
-            android:textColor="@color/primary_text"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="parent"
-            tools:layout_editor_absoluteX="275dp" />
-
-        <TextView
-            android:id="@+id/txId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Id"
-            android:textColor="@color/secondary_text"
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="155dp" />
-
         <ImageView
             android:id="@+id/imgHero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="128dp"
+            android:padding="12dp"
+            android:foregroundGravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/txName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:layout_marginBottom="8dp"
+            android:text="@string/name"
             android:textColor="@color/primary_text"
             android:textSize="14sp"
-            tools:layout_editor_absoluteX="173dp"
-            tools:layout_editor_absoluteY="128dp" />
-
-        <TextView
-            android:id="@+id/txSince"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Since"
-            android:textColor="@color/primary_text"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/txId"
-            tools:layout_editor_absoluteX="202dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imgHero"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/imgHero"
+            app:layout_constraintTop_toBottomOf="@+id/imgHero"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

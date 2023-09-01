@@ -5,4 +5,13 @@
     <string name="todo">TODO</string>
     <string name="enviar_email">enviar email</string>
     <string name="send_to" />
+    <string name="name">Name</string>
+    <string name="lo_quiero">Lo Quiero</string>
+    <string name="color">Color</string>
+    <string name="id">Id</string>
+    <string name="imagen_superheroe">imagen superheroe</string>
+    <string name="origin">Origin</string>
+    <string name="power">Power</string>
+    <string name="since">Since</string>
+    <string name="translate">Translate</string>
 </resources>

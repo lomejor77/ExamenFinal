@@ -6,135 +6,164 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
-    app:cardCornerRadius="8dp"
-    android:elevation="5dp"
+    android:animateLayoutChanges="true"
     app:cardBackgroundColor="@color/light_primary"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
     tools:context=".view.DetailFragment">
-
     <ScrollView
-        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constDetail"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/detImg"
-                android:layout_width="129dp"
-                android:layout_height="149dp"
-                android:layout_marginTop="32dp"
-                android:contentDescription="@string/todo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/baseline_android_24"
-                tools:ignore="ImageContrastCheck" />
-
-            <TextView
-                android:id="@+id/detName"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constDetail"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/detImg"
-                app:layout_constraintStart_toStartOf="@+id/detImg"
-                app:layout_constraintTop_toBottomOf="@+id/detImg" />
+                android:animateLayoutChanges="true">
 
-            <TextView
-                android:id="@+id/detOrigin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/detName"
-                app:layout_constraintStart_toStartOf="@+id/detName"
-                app:layout_constraintTop_toBottomOf="@+id/detName" />
+                <ImageView
+                    android:id="@+id/detImg"
+                    android:layout_width="106dp"
+                    android:layout_height="92dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/imagen_superheroe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:mipmap/sym_def_app_icon"
+                    tools:ignore="ImageContrastCheck" />
 
-            <TextView
-                android:id="@+id/detPower"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/detOrigin"
-                app:layout_constraintStart_toStartOf="@+id/detOrigin"
-                app:layout_constraintTop_toBottomOf="@+id/detOrigin" />
+                <TextView
+                    android:id="@+id/detName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints="Nombre:"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detImg"
+                    tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/detSince"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/detPower"
-                app:layout_constraintStart_toStartOf="@+id/detPower"
-                app:layout_constraintTop_toBottomOf="@+id/detPower" />
+                <TextView
+                    android:id="@+id/detOrigin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/origin"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/detName"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/detName"
+                    app:layout_constraintTop_toBottomOf="@+id/detName" />
 
-            <TextView
-                android:id="@+id/detColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/detSince"
-                app:layout_constraintStart_toStartOf="@+id/detSince"
-                app:layout_constraintTop_toBottomOf="@+id/detSince" />
+                <TextView
+                    android:id="@+id/detPower"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/power"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/detImg"
+                    app:layout_constraintStart_toEndOf="@+id/detImg"
+                    app:layout_constraintTop_toTopOf="@+id/detImg"
+                    app:layout_constraintVertical_bias="0.485"
+                    tools:textAlignment="gravity" />
 
-            <TextView
-                android:id="@+id/detTranslate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/detColor"
-                app:layout_constraintStart_toStartOf="@+id/detColor"
-                app:layout_constraintTop_toBottomOf="@+id/detColor" />
+                <TextView
+                    android:id="@+id/detSince"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/since"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/detOrigin"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/detOrigin"
+                    app:layout_constraintTop_toBottomOf="@+id/detOrigin" />
 
-            <TextView
-                android:id="@+id/detId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/detTranslate"
-                app:layout_constraintStart_toStartOf="@+id/detTranslate"
-                app:layout_constraintTop_toBottomOf="@+id/detTranslate" />
+                <TextView
+                    android:id="@+id/detColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/color"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/detSince"
+                    app:layout_constraintStart_toEndOf="@+id/detSince"
+                    app:layout_constraintTop_toTopOf="@+id/detSince" />
 
-            <Button
-                android:id="@+id/btnMail"
-                android:layout_width="137dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="344dp"
-                android:layout_marginEnd="12dp"
-                android:backgroundTint="@color/accent"
-                android:elevation="4dp"
-                android:text="Lo Quiero"
-                app:cornerRadius="2dp"
-                app:icon="@drawable/baseline_tag_faces_24"
-                app:iconPadding="3dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/detTranslate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="@string/translate"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/detColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.216"
+                    app:layout_constraintStart_toEndOf="@+id/detColor"
+                    app:layout_constraintTop_toTopOf="@+id/detColor"
+                    app:layout_constraintVertical_bias="0.0" />
 
+                <TextView
+                    android:id="@+id/detId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/detName"
+                    app:layout_constraintTop_toTopOf="@+id/detName"
+                    tools:layout_editor_absoluteX="113dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/btnMail"
+                    android:layout_width="142dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/accent"
+                    android:elevation="4dp"
+                    android:text="@string/lo_quiero"
+                    app:cornerRadius="2dp"
+                    app:icon="@drawable/baseline_tag_faces_24"
+                    app:iconPadding="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/detImg"
+                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintStart_toStartOf="@+id/detImg"
+                    app:layout_constraintTop_toBottomOf="@+id/detSince"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
     </ScrollView>
+
 
 </androidx.cardview.widget.CardView>
