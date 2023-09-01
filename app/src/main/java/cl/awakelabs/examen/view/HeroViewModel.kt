@@ -19,5 +19,7 @@ class HeroViewModel(application: Application) : AndroidViewModel(application) {
     //funcion al primer fragmento
     fun getAllHeros()  = viewModelScope.launch { repository.getHeros() }
     fun heroLiveData() = repository.obtainHerosEntity()
+    fun getDetails(id: Int) = viewModelScope.launch { repository.obtainDetail(id) }
+    fun idHeroLiveData(id: Int) = repository.idDetail(id)
 
 }

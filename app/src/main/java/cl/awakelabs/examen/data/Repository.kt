@@ -11,7 +11,7 @@ import cl.awakelabs.examen.data.remote.HeroAPI
 
 class Repository(private val heroAPI: HeroAPI, private val heroDAO: HeroDAO) {
     fun obtainHerosEntity(): LiveData<List<HeroEntity>> = heroDAO.getHerosList()
-    fun idDetail(id: Int): LiveData<List<HeroDetailEntity>> = heroDAO.getHeroDetails(id)
+    fun idDetail(id: Int): LiveData<HeroDetailEntity> = heroDAO.getHeroDetails(id)
 
     suspend fun getHeros() {
         try {

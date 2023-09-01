@@ -1,8 +1,11 @@
 package cl.awakelabs.examen.view
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import cl.awakelabs.examen.R
 import cl.awakelabs.examen.data.local.HeroEntity
 import cl.awakelabs.examen.data.remote.Hero
 import cl.awakelabs.examen.databinding.FragmentListBinding
@@ -43,6 +46,12 @@ class HeroAdapter : RecyclerView.Adapter<HeroAdapter.ItemHeroViewHolder>() {
             view.txOrigin.text = hero.origin
             view.txPower.text = hero.power
             view.txSince.text = hero.since.toString()
+
+            view.cardList.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putInt("id", hero.id.toInt())
+                Navigation.findNavController(view.root).navigate(R.id.action_listFragment_to_detailFragment, bundle)
+            }
         }
 
     }

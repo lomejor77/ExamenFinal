@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardDetail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="5dp"
+    app:cardBackgroundColor="@color/light_primary"
+    tools:context=".view.DetailFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detImg"
+                android:layout_width="192dp"
+                android:layout_height="208dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/detName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detImg"
+                app:layout_constraintStart_toStartOf="@+id/detImg"
+                app:layout_constraintTop_toBottomOf="@+id/detImg" />
+
+            <TextView
+                android:id="@+id/detOrigin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detName"
+                app:layout_constraintStart_toStartOf="@+id/detName"
+                app:layout_constraintTop_toBottomOf="@+id/detName" />
+
+            <TextView
+                android:id="@+id/detPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detOrigin"
+                app:layout_constraintStart_toStartOf="@+id/detOrigin"
+                app:layout_constraintTop_toBottomOf="@+id/detOrigin" />
+
+            <TextView
+                android:id="@+id/detSince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detPower"
+                app:layout_constraintStart_toStartOf="@+id/detPower"
+                app:layout_constraintTop_toBottomOf="@+id/detPower" />
+
+            <TextView
+                android:id="@+id/detColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detSince"
+                app:layout_constraintStart_toStartOf="@+id/detSince"
+                app:layout_constraintTop_toBottomOf="@+id/detSince" />
+
+            <TextView
+                android:id="@+id/detTranslate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/detColor"
+                app:layout_constraintStart_toStartOf="@+id/detColor"
+                app:layout_constraintTop_toBottomOf="@+id/detColor" />
+
+            <TextView
+                android:id="@+id/detId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/detTranslate"
+                app:layout_constraintStart_toStartOf="@+id/detTranslate"
+                app:layout_constraintTop_toBottomOf="@+id/detTranslate" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

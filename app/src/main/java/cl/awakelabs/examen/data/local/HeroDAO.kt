@@ -18,7 +18,7 @@ interface HeroDAO {
     suspend fun insertDetails(heroDetailEntity: HeroDetailEntity)
 
     @Query("SELECT * FROM tbl_details WHERE id LIKE :id")
-    fun getHeroDetails(id: Int): LiveData<List<HeroDetailEntity>>
+    fun getHeroDetails(id: Int): LiveData<HeroDetailEntity>
 
 
 }
