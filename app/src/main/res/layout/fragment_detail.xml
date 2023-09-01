@@ -23,13 +23,14 @@
 
             <ImageView
                 android:id="@+id/detImg"
-                android:layout_width="192dp"
-                android:layout_height="208dp"
+                android:layout_width="129dp"
+                android:layout_height="149dp"
                 android:layout_marginTop="32dp"
                 android:contentDescription="@string/todo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_android_24"
                 tools:ignore="ImageContrastCheck" />
 
             <TextView
@@ -117,7 +118,20 @@
                 app:layout_constraintStart_toStartOf="@+id/detTranslate"
                 app:layout_constraintTop_toBottomOf="@+id/detTranslate" />
 
-
+            <Button
+                android:id="@+id/btnMail"
+                android:layout_width="137dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="344dp"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="@color/accent"
+                android:elevation="4dp"
+                android:text="Lo Quiero"
+                app:cornerRadius="2dp"
+                app:icon="@drawable/baseline_tag_faces_24"
+                app:iconPadding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

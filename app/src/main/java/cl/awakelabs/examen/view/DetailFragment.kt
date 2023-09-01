@@ -35,7 +35,7 @@ class DetailFragment : Fragment() {
         binding = FragmentDetailBinding.inflate(layoutInflater, container, false)
         heroViewModel.getDetails(selectedId)
         loadDetails()
-        //sendMail()
+        sendMail()
         return binding.root
 
     }
@@ -63,8 +63,12 @@ class DetailFragment : Fragment() {
         }
     }
 
-    /*private fun sendMail() {
-        TODO("Not yet implemented")
-    }*/
+    private fun sendMail() {
+        binding.btnMail.setOnClickListener {
+           heroViewModel.detailLiveData(selectedId).observe(viewLifecycleOwner) {
+               heroViewModel.sendEmail(requireContext(),it.name, selectedId)
+           }
+        }
+    }
 
 }
